@@ -2,6 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>demo-one</module>
+        <module>demo-two</module>
+        <module>demo-three</module>
+    </modules>
+    <!-- 1.创建一个Maven工程，选择jar类型项目2.引入SpringBootMaven依赖。 -->
+    <!-- Maven parent 目的，聚合工程、继承关系 -->
+    <!--Spring parent 目的： 统一整合第三方框架依赖信息 (SpringBoot 支持依赖 不需要写版本号) -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,6 +28,9 @@
     </properties>
 
     <dependencies>
+        <!-- -springboot 整合Web组件 整合SpringMVC 就会把传统方式的SpringMVC依赖的jar全部给下载来 -->
+        <!-- 引入spring-boot-starter-web 帮你整合好所有相关的依赖jar包 原理 maven依赖传递 -->
+        <!-- 原理： spring-boot-starter-parent< 中，整合号相关 jar依赖信息 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -29,6 +41,33 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.kafka</groupId>-->
+            <!--<artifactId>spring-kafka</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>2.2.7.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -38,6 +77,18 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>/demo-three/src/main/resources</directory>-->
+                <!--&lt;!&ndash;排除静态资源&ndash;&gt;-->
+                <!--<excludes>-->
+                    <!--<exclude>/static/js/**</exclude>-->
+                <!--</excludes>-->
+                <!--<includes>-->
+                    <!--<include>**</include>-->
+                <!--</includes>-->
+            <!--</resource>-->
+        <!--</resources>-->
     </build>
 
 </project>

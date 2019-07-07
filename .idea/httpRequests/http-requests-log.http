@@ -1,0 +1,64 @@
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T101838.200.txt
+
+###
+
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T101729.200.txt
+
+###
+
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T100041.200.txt
+
+###
+
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T095749.500.json
+
+###
+
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T095651.500.json
+
+###
+
+GET http://localhost:8080/kafka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T095418.500.json
+
+###
+
+GET http://localhost:8080/kafaka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T095408.404.json
+
+###
+
+GET http://localhost:8080/kafaka/producer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-07T072055.200.txt
+
+###
+

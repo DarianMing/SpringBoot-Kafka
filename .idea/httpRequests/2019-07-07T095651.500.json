@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-07-07T13:56:51.298+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Can't convert key of class java.lang.String to class org.apache.kafka.common.serialization.IntegerSerializer specified in key.serializer",
+  "path": "/kafka/producer"
+}
